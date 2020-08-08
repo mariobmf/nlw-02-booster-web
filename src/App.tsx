@@ -1,11 +1,11 @@
 import React from 'react';
 
+import Landing from './pages/Landing';
+
+import './assets/styles/global.css';
+
 const App: React.FC = () => {
-  return (
-    <div className="App">
-      <h1>Inital Commit</h1>
-    </div>
-  );
+  return <Landing />;
 };
 
 export default App;
