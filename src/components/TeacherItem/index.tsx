@@ -4,6 +4,7 @@ import React from 'react';
 import wppIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
+import api from '../../services/api';
 
 export interface ITeacher {
   id: number;
@@ -19,6 +20,12 @@ interface IProps {
 }
 
 const TeacherItem: React.FC<IProps> = ({ teacher }) => {
+  const createNewConnection = () => {
+    api.post('connections', {
+      user_id: teacher.id,
+    });
+  };
+
   return (
     <article className="teacher-item">
       <header>
@@ -38,6 +45,7 @@ const TeacherItem: React.FC<IProps> = ({ teacher }) => {
           target="_blank"
           rel="noreferrer"
           type="button"
+          onClick={createNewConnection}
           href={`https://wa.me/${teacher.whatsapp}`}
         >
           <img src={wppIcon} alt="Whatsapp" />
