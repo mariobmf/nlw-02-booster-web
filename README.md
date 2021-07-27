@@ -14,6 +14,7 @@
 
 ## 🚀 Tecnologias
 - [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## 💻 Projeto
 O Proffy é uma plataforma de estudos online que ajuda pessoas a encontrarem professores online.
